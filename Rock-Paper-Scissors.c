@@ -1,5 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
+#if defined(_WIN32)
+    #define CLEAR_COMMAND "cls"
+#elif defined(__unix__)
+    #define CLEAR_COMMAND "clear"
+#endif
 
 int rounds, rounds_done, choice, random, result;
 
@@ -23,7 +28,7 @@ int main()
         else
             printf("The computer won this round! Next round: %d/%d\n", rounds_done, rounds);
         system("pause");
-        system("clear");
+        system(CLEAR_COMMAND);
     }
     exit(EXIT_SUCCESS);
 }
