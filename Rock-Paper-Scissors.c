@@ -28,7 +28,6 @@ int main()
         else
             printf("The computer won this round! Next round: %d/%d\n", rounds_done, rounds);
         system("pause");
-        system(CLEAR_COMMAND);
     }
     exit(EXIT_SUCCESS);
 }
@@ -36,7 +35,11 @@ int main()
 
 int game(void)
 {
+    system(CLEAR_COMMAND);
     random = rand() % 3 + 1;
+    puts("1: Rock");
+    puts("2: Paper");
+    puts("3: Scissors");
     puts("\nPlease choose a number or a sign: ");
     scanf("%d", &choice);
     
