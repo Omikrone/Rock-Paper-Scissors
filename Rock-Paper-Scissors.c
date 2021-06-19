@@ -1,3 +1,6 @@
+/*
+Version v1.1 du programme en C Rock-Paper-Scissors
+*/
 #include <stdio.h>
 #include <stdlib.h>
 #if defined(_WIN32)
